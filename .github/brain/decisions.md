@@ -23,4 +23,10 @@ every choice — only those someone would reasonably reopen.
 
 ---
 
-<!-- Nothing yet. -->
+## [2026-10-15] Keep the CaseNetwork project layer synchronized through its own project repository
+
+**What was decided** — Keep the CaseNetwork project layer synchronized through its own project repository.
+
+**Why** — The user chose to sync the project layer; a dedicated remote keeps project context independent from the personal layer and lets it sync across machines and collaborators.
+
+**What it costs** — The project layer requires its own sync and consolidation workflow.
