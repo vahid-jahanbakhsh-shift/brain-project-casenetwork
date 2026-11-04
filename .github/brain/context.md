@@ -45,3 +45,8 @@ No shared code-style convention has been confirmed. Follow each repository's own
 ## Constraints and known facts
 
 No known legacy areas or other constraints to avoid have been identified.
+
+## CaseNetwork verification integration
+
+- As recorded on 2026-10-13, CIMS `GET /real-entities/{realEntityId}/verified-connections` is the source of truth for CaseNetwork node verification. Inspection of the CIMS controller, Shift `TransactionMatchService`, graph API consumers, and graph response view models confirmed that Shift already reads these records for transaction matches, but its graph-facing entity and link responses did not expose a verified marker at that time.
+- The agreed propagation and display behavior is recorded in [decisions.md](decisions.md#2026-10-13-carry-verification-data-through-existing-graph-responses). This context records the inspected baseline, not confirmation that the planned contract changes have shipped.
