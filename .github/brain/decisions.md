@@ -23,6 +23,16 @@ every choice — only those someone would reasonably reopen.
 
 ---
 
+## [2026-11-04] Manage ticket E2E through `/casenetwork-e2e start|stop`
+
+**What was decided** — Provide `/casenetwork-e2e start` and `/casenetwork-e2e stop` for the current CaseNetwork ticket workspace, using its customized start and revert scripts.
+
+**Why** — A direct command makes the established workspace-specific E2E workflow easy to invoke without repeating the startup instructions.
+
+**What it costs** — The command must verify workspace ownership, obtain explicit approval before local database initialization, and preview configuration restoration and process shutdown before stopping.
+
+---
+
 ## [2026-10-15] Keep the CaseNetwork project layer synchronized through its own project repository
 
 **What was decided** — Keep the CaseNetwork project layer synchronized through its own project repository.
