@@ -13,6 +13,7 @@ move: an index that lies is worse than no index.
 | [../instructions/git-and-github--lowercase-hyphenated-branches.instructions.md](../instructions/git-and-github--lowercase-hyphenated-branches.instructions.md) | CaseNetwork branch naming | A project-wide branch naming convention changes |
 | [../instructions/local-e2e--backend-before-frontend.instructions.md](../instructions/local-e2e--backend-before-frontend.instructions.md) | Local E2E startup ordering | Backend and frontend startup dependencies change |
 | [../instructions/local-e2e--workspace-specific-scripts.instructions.md](../instructions/local-e2e--workspace-specific-scripts.instructions.md) | Workspace-specific E2E start/revert scripts and safe configuration restoration | Creating a ticket workspace or starting/stopping its E2E environment |
+| [../prompts/casenetwork-e2e.prompt.md](../prompts/casenetwork-e2e.prompt.md) | `/casenetwork-e2e start|stop` workflow for the current ticket workspace | Starting or stopping ticket-local E2E |
 | [../instructions/cross-repo--cims-sdk-compatibility.instructions.md](../instructions/cross-repo--cims-sdk-compatibility.instructions.md) | Generated-client schema and runtime compatibility between CIMS and Shift | SDK integration validation changes |
 | [decisions.md](decisions.md) | Dated log of settled choices and **why**, most recent first | A choice is settled (technology, architecture, boundary) |
 | [inbox/](inbox/README.md) | Fragments waiting to be filed | `/brain-promote` writes here; `/brain-consolidate project` empties it |
@@ -25,7 +26,7 @@ set** under `../../conventions/` (§ 1 ter). Write them with `/brain-scope-rules
 
 1. `../instructions/00-project-core.instructions.md` is always in context, together with the company
    and personal cores.
-2. Read the matching card in `../instructions/` before naming branches, creating a ticket workspace, starting/stopping local E2E, or consuming a generated CIMS SDK.
+2. Read the matching card in `../instructions/` before naming branches, creating a ticket workspace, or consuming a generated CIMS SDK; use `/casenetwork-e2e start|stop` for ticket-local E2E.
 3. Read the headings of `decisions.md` as soon as the work touches architecture, security, data or
    naming.
 4. Lessons that produce a rule live in its card; historical incident detail is preserved in the consolidation commit.
