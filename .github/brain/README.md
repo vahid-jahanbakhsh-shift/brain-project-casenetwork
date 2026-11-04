@@ -7,15 +7,13 @@ deliberately short.
 **This map is authoritative.** Any file created, merged or moved is reflected here in the same
 move: an index that lies is worse than no index.
 
-<!-- `rules/` and `lessons/` start empty on purpose. Add one line per file as you create it, and
-     replace the `<subject>` rows below once you have real subjects. -->
-
 | File | Contents | When to write to it |
 |---|---|---|
 | [context.md](context.md) | The ground: stack, repositories, environments, controls, conventions, measured facts | Filled by `/brain-onboard project`; re-run it when the ground moves |
-| `rules/<subject>.md` | The full text of the rules on one subject — architecture, environments, procedures | A choice that holds between repositories is settled |
+| [../instructions/git-and-github--lowercase-hyphenated-branches.instructions.md](../instructions/git-and-github--lowercase-hyphenated-branches.instructions.md) | CaseNetwork branch naming | A project-wide branch naming convention changes |
+| [../instructions/local-e2e--backend-before-frontend.instructions.md](../instructions/local-e2e--backend-before-frontend.instructions.md) | Local E2E startup ordering | Backend and frontend startup dependencies change |
+| [../instructions/cross-repo--cims-sdk-compatibility.instructions.md](../instructions/cross-repo--cims-sdk-compatibility.instructions.md) | Generated-client schema and runtime compatibility between CIMS and Shift | SDK integration validation changes |
 | [decisions.md](decisions.md) | Dated log of settled choices and **why**, most recent first | A choice is settled (technology, architecture, boundary) |
-| [lessons/](lessons/) | Principles paid for by a real failure, one file per subject | An experience yields something that must not be relearnt |
 | [inbox/](inbox/README.md) | Fragments waiting to be filed | `/brain-promote` writes here; `/brain-consolidate project` empties it |
 
 Per-language and per-folder code rules are **not** here and not in `../instructions/` either: they
@@ -26,10 +24,10 @@ set** under `../../conventions/` (§ 1 ter). Write them with `/brain-scope-rules
 
 1. `../instructions/00-project-core.instructions.md` is always in context, together with the company
    and personal cores.
-2. Read the `rules/<subject>.md` that matches the work at hand, before acting.
+2. Read the matching card in `../instructions/` before naming branches, starting local E2E, or consuming a generated CIMS SDK.
 3. Read the headings of `decisions.md` as soon as the work touches architecture, security, data or
    naming.
-4. Read `lessons/<subject>.md` when approaching a problem of a kind that has already bitten.
+4. Lessons that produce a rule live in its card; historical incident detail is preserved in the consolidation commit.
 
 ## How to write to it
 

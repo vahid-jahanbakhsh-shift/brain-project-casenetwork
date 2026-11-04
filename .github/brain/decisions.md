@@ -30,3 +30,19 @@ every choice — only those someone would reasonably reopen.
 **Why** — The user chose to sync the project layer; a dedicated remote keeps project context independent from the personal layer and lets it sync across machines and collaborators.
 
 **What it costs** — The project layer requires its own sync and consolidation workflow.
+
+## [2026-10-13] Carry verification data through existing graph responses
+
+**What was decided** — Carry CIMS verified-connection group IDs through the existing case-entity and real-entity link responses, then derive the CaseNetwork verified flag in the frontend instead of adding a separate verification endpoint.
+
+**Why** — The case-entity response already contains these IDs, and adding them to linked-entity responses gives both graph paths the same source-of-truth data while avoiding a separate request.
+
+**What it costs** — Coordinated CIMS and Shift API contract updates, generated-client packaging, and cross-repository tests.
+
+## [2026-10-13] Highlight nodes with any CIMS verified connection
+
+**What was decided** — When CIMS returns at least one verified-connection record for a CaseNetwork node's `realEntityId`, render current-case nodes with a clearer yellow background and expanded verified nodes with a more muted gray-yellow background, even when the linked detection record is not present in the graph.
+
+**Why** — Any verified connection qualifies; current-case verified nodes should be more visually prominent than expanded verified nodes. CIMS is the source of truth for those records.
+
+**What it costs** — Both current-case and expanded graph paths must preserve the same verification predicate while rendering distinct visual emphasis.
